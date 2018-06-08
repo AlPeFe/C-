@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="comunicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MISSATGE">
+          <Key>
+            <PropertyRef Name="NUM_MIS" />
+          </Key>
+          <Property Name="NUM_MIS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CODI_VHI" Type="varchar" MaxLength="3" />
+          <Property Name="TIPUS_MIS" Type="char" MaxLength="3" />
+          <Property Name="ACCIO_MIS" Type="char" MaxLength="3" />
+          <Property Name="DATA_MIS" Type="datetime" />
+          <Property Name="NUM_SRV" Type="char" MaxLength="9" />
+          <Property Name="DATA_LLOC" Type="datetime" />
+          <Property Name="DIR_INICI" Type="char" MaxLength="100" />
+          <Property Name="DIR_FINAL" Type="char" MaxLength="100" />
+          <Property Name="POB_INICI" Type="char" MaxLength="50" />
+          <Property Name="POB_FINAL" Type="char" MaxLength="50" />
+          <Property Name="PRV_INICI" Type="char" MaxLength="20" />
+          <Property Name="PRV_FINAL" Type="char" MaxLength="20" />
+          <Property Name="EDAT" Type="numeric" Precision="3" Scale="0" />
+          <Property Name="CODI_PAC" Type="char" MaxLength="8" />
+          <Property Name="NOM" Type="char" MaxLength="30" />
+          <Property Name="COGNOMS" Type="char" MaxLength="50" />
+          <Property Name="CODI_XOF" Type="char" MaxLength="5" />
+          <Property Name="CODI_MET" Type="char" MaxLength="5" />
+          <Property Name="CODI_ENF" Type="char" MaxLength="5" />
+          <Property Name="CODI_TRM" Type="char" MaxLength="3" />
+          <Property Name="CODI_TRA" Type="char" MaxLength="3" />
+          <Property Name="CODI_SIN" Type="char" MaxLength="3" />
+          <Property Name="CODI_DIG" Type="char" MaxLength="3" />
+          <Property Name="TIPUS_SRV" Type="char" MaxLength="1" />
+          <Property Name="LITRES" Type="float" />
+          <Property Name="KM" Type="float" />
+          <Property Name="IMPORT" Type="float" />
+          <Property Name="REFERENCIA" Type="char" MaxLength="40" />
+          <Property Name="TEL_SRV" Type="char" MaxLength="15" />
+          <Property Name="TIPUS_TARGETA" Type="char" MaxLength="3" />
+          <Property Name="DADES_TARGETA" Type="char" MaxLength="200" />
+          <Property Name="ACOMPANYANT" Type="smallint" />
+          <Property Name="P10" Type="smallint" />
+          <Property Name="CIP" Type="char" MaxLength="20" />
+          <Property Name="NASS" Type="char" MaxLength="14" />
+          <Property Name="DNI" Type="char" MaxLength="15" />
+          <Property Name="CODI_CLA" Type="char" MaxLength="3" />
+          <Property Name="CODI_ANU" Type="char" MaxLength="3" />
+          <Property Name="CODI_LOT" Type="char" MaxLength="4" />
+          <Property Name="CONFLICTIVITAT" Type="char" MaxLength="1" />
+          <Property Name="PRIORITAT" Type="char" MaxLength="1" />
+          <Property Name="OBS" Type="char" MaxLength="250" />
+          <Property Name="ESTAT" Type="int" />
+          <Property Name="DATA_INICI_SRV" Type="datetime" />
+          <Property Name="CODI_AJU" Type="char" MaxLength="5" />
+          <Property Name="CODI_EMP" Type="char" MaxLength="5" />
+          <Property Name="X_1" Type="float" />
+          <Property Name="Y_1" Type="float" />
+          <Property Name="X_2" Type="float" />
+          <Property Name="Y_2" Type="float" />
+          <Property Name="DES_RUTA" Type="varchar" MaxLength="100" />
+          <Property Name="RUTA" Type="varchar" MaxLength="15" />
+          <Property Name="NUM_SRV_RUTA" Type="int" />
+          <Property Name="NUM_SRV_TOTAL_RUTA" Type="int" />
+          <Property Name="ACCIO_RUTA" Type="char" MaxLength="1" />
+          <Property Name="NUM_ENVIAMENT" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="OXIGEN" Type="smallint" />
+          <Property Name="MENSAJE_TX" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="REINTENTOS" Type="int" />
+          <Property Name="HOME_SI_NO" Type="numeric" Precision="1" Scale="0" />
+          <Property Name="DATA_NEIX" Type="datetime" />
+          <Property Name="DATA_ENVIA" Type="datetime" />
+          <Property Name="CODI_CHK" Type="varchar" MaxLength="3" />
+          <Property Name="SYS_215_CHK" Type="varchar" MaxLength="10" />
+          <Property Name="TEST_1" Type="varchar" MaxLength="1" />
+          <Property Name="UNITATS_DEMANADES" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="TEST_2" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="comunicaModelStoreContainer">
+          <EntitySet Name="MISSATGE" EntityType="Self.MISSATGE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="comunicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MISSATGE">
+          <Key>
+            <PropertyRef Name="NUM_MIS" />
+          </Key>
+          <Property Name="NUM_MIS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CODI_VHI" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="TIPUS_MIS" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ACCIO_MIS" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="DATA_MIS" Type="DateTime" Precision="3" />
+          <Property Name="NUM_SRV" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Name="DATA_LLOC" Type="DateTime" Precision="3" />
+          <Property Name="DIR_INICI" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="DIR_FINAL" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="POB_INICI" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="POB_FINAL" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PRV_INICI" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PRV_FINAL" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="EDAT" Type="Decimal" Precision="3" Scale="0" />
+          <Property Name="CODI_PAC" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="NOM" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="COGNOMS" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_XOF" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_MET" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_ENF" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_TRM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_TRA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_SIN" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_DIG" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="TIPUS_SRV" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="LITRES" Type="Double" />
+          <Property Name="KM" Type="Double" />
+          <Property Name="IMPORT" Type="Double" />
+          <Property Name="REFERENCIA" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="TEL_SRV" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="TIPUS_TARGETA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="DADES_TARGETA" Type="String" MaxLength="200" FixedLength="true" Unicode="false" />
+          <Property Name="ACOMPANYANT" Type="Int16" />
+          <Property Name="P10" Type="Int16" />
+          <Property Name="CIP" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="NASS" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="DNI" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_CLA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_ANU" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_LOT" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="CONFLICTIVITAT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PRIORITAT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OBS" Type="String" MaxLength="250" FixedLength="true" Unicode="false" />
+          <Property Name="ESTAT" Type="Int32" />
+          <Property Name="DATA_INICI_SRV" Type="DateTime" Precision="3" />
+          <Property Name="CODI_AJU" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="CODI_EMP" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="X_1" Type="Double" />
+          <Property Name="Y_1" Type="Double" />
+          <Property Name="X_2" Type="Double" />
+          <Property Name="Y_2" Type="Double" />
+          <Property Name="DES_RUTA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RUTA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="NUM_SRV_RUTA" Type="Int32" />
+          <Property Name="NUM_SRV_TOTAL_RUTA" Type="Int32" />
+          <Property Name="ACCIO_RUTA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="NUM_ENVIAMENT" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="OXIGEN" Type="Int16" />
+          <Property Name="MENSAJE_TX" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="REINTENTOS" Type="Int32" />
+          <Property Name="HOME_SI_NO" Type="Decimal" Precision="1" Scale="0" />
+          <Property Name="DATA_NEIX" Type="DateTime" Precision="3" />
+          <Property Name="DATA_ENVIA" Type="DateTime" Precision="3" />
+          <Property Name="CODI_CHK" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SYS_215_CHK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TEST_1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UNITATS_DEMANADES" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="TEST_2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="comunicaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MISSATGE" EntityType="Self.MISSATGE" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="comunicaModelStoreContainer" CdmEntityContainer="comunicaEntities">
+          <EntitySetMapping Name="MISSATGE">
+            <EntityTypeMapping TypeName="comunicaModel.MISSATGE">
+              <MappingFragment StoreEntitySet="MISSATGE">
+                <ScalarProperty Name="NUM_MIS" ColumnName="NUM_MIS" />
+                <ScalarProperty Name="CODI_VHI" ColumnName="CODI_VHI" />
+                <ScalarProperty Name="TIPUS_MIS" ColumnName="TIPUS_MIS" />
+                <ScalarProperty Name="ACCIO_MIS" ColumnName="ACCIO_MIS" />
+                <ScalarProperty Name="DATA_MIS" ColumnName="DATA_MIS" />
+                <ScalarProperty Name="NUM_SRV" ColumnName="NUM_SRV" />
+                <ScalarProperty Name="DATA_LLOC" ColumnName="DATA_LLOC" />
+                <ScalarProperty Name="DIR_INICI" ColumnName="DIR_INICI" />
+                <ScalarProperty Name="DIR_FINAL" ColumnName="DIR_FINAL" />
+                <ScalarProperty Name="POB_INICI" ColumnName="POB_INICI" />
+                <ScalarProperty Name="POB_FINAL" ColumnName="POB_FINAL" />
+                <ScalarProperty Name="PRV_INICI" ColumnName="PRV_INICI" />
+                <ScalarProperty Name="PRV_FINAL" ColumnName="PRV_FINAL" />
+                <ScalarProperty Name="EDAT" ColumnName="EDAT" />
+                <ScalarProperty Name="CODI_PAC" ColumnName="CODI_PAC" />
+                <ScalarProperty Name="NOM" ColumnName="NOM" />
+                <ScalarProperty Name="COGNOMS" ColumnName="COGNOMS" />
+                <ScalarProperty Name="CODI_XOF" ColumnName="CODI_XOF" />
+                <ScalarProperty Name="CODI_MET" ColumnName="CODI_MET" />
+                <ScalarProperty Name="CODI_ENF" ColumnName="CODI_ENF" />
+                <ScalarProperty Name="CODI_TRM" ColumnName="CODI_TRM" />
+                <ScalarProperty Name="CODI_TRA" ColumnName="CODI_TRA" />
+                <ScalarProperty Name="CODI_SIN" ColumnName="CODI_SIN" />
+                <ScalarProperty Name="CODI_DIG" ColumnName="CODI_DIG" />
+                <ScalarProperty Name="TIPUS_SRV" ColumnName="TIPUS_SRV" />
+                <ScalarProperty Name="LITRES" ColumnName="LITRES" />
+                <ScalarProperty Name="KM" ColumnName="KM" />
+                <ScalarProperty Name="IMPORT" ColumnName="IMPORT" />
+                <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+                <ScalarProperty Name="TEL_SRV" ColumnName="TEL_SRV" />
+                <ScalarProperty Name="TIPUS_TARGETA" ColumnName="TIPUS_TARGETA" />
+                <ScalarProperty Name="DADES_TARGETA" ColumnName="DADES_TARGETA" />
+                <ScalarProperty Name="ACOMPANYANT" ColumnName="ACOMPANYANT" />
+                <ScalarProperty Name="P10" ColumnName="P10" />
+                <ScalarProperty Name="CIP" ColumnName="CIP" />
+                <ScalarProperty Name="NASS" ColumnName="NASS" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="CODI_CLA" ColumnName="CODI_CLA" />
+                <ScalarProperty Name="CODI_ANU" ColumnName="CODI_ANU" />
+                <ScalarProperty Name="CODI_LOT" ColumnName="CODI_LOT" />
+                <ScalarProperty Name="CONFLICTIVITAT" ColumnName="CONFLICTIVITAT" />
+                <ScalarProperty Name="PRIORITAT" ColumnName="PRIORITAT" />
+                <ScalarProperty Name="OBS" ColumnName="OBS" />
+                <ScalarProperty Name="ESTAT" ColumnName="ESTAT" />
+                <ScalarProperty Name="DATA_INICI_SRV" ColumnName="DATA_INICI_SRV" />
+                <ScalarProperty Name="CODI_AJU" ColumnName="CODI_AJU" />
+                <ScalarProperty Name="CODI_EMP" ColumnName="CODI_EMP" />
+                <ScalarProperty Name="X_1" ColumnName="X_1" />
+                <ScalarProperty Name="Y_1" ColumnName="Y_1" />
+                <ScalarProperty Name="X_2" ColumnName="X_2" />
+                <ScalarProperty Name="Y_2" ColumnName="Y_2" />
+                <ScalarProperty Name="DES_RUTA" ColumnName="DES_RUTA" />
+                <ScalarProperty Name="RUTA" ColumnName="RUTA" />
+                <ScalarProperty Name="NUM_SRV_RUTA" ColumnName="NUM_SRV_RUTA" />
+                <ScalarProperty Name="NUM_SRV_TOTAL_RUTA" ColumnName="NUM_SRV_TOTAL_RUTA" />
+                <ScalarProperty Name="ACCIO_RUTA" ColumnName="ACCIO_RUTA" />
+                <ScalarProperty Name="NUM_ENVIAMENT" ColumnName="NUM_ENVIAMENT" />
+                <ScalarProperty Name="OXIGEN" ColumnName="OXIGEN" />
+                <ScalarProperty Name="MENSAJE_TX" ColumnName="MENSAJE_TX" />
+                <ScalarProperty Name="REINTENTOS" ColumnName="REINTENTOS" />
+                <ScalarProperty Name="HOME_SI_NO" ColumnName="HOME_SI_NO" />
+                <ScalarProperty Name="DATA_NEIX" ColumnName="DATA_NEIX" />
+                <ScalarProperty Name="DATA_ENVIA" ColumnName="DATA_ENVIA" />
+                <ScalarProperty Name="CODI_CHK" ColumnName="CODI_CHK" />
+                <ScalarProperty Name="SYS_215_CHK" ColumnName="SYS_215_CHK" />
+                <ScalarProperty Name="TEST_1" ColumnName="TEST_1" />
+                <ScalarProperty Name="UNITATS_DEMANADES" ColumnName="UNITATS_DEMANADES" />
+                <ScalarProperty Name="TEST_2" ColumnName="TEST_2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

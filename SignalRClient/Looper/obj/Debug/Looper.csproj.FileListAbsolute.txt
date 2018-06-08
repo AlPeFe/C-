@@ -1,0 +1,12 @@
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Looper.exe.config
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Looper.exe
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Looper.pdb
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Aegis.SignalR.Client.TypedHubProxy.dll
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Aegis.SignalR.Infrastructures.dll
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\obj\Debug\Looper.csproj.CoreCompileInputs.cache
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\obj\Debug\Looper.exe
+C:\Users\Jordi.PS\documents\visual studio 2017\Projects\GamDroidSingalR\Looper\obj\Debug\Looper.pdb
